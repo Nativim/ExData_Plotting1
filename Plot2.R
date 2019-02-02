@@ -11,8 +11,9 @@ graph_data$Date <- as.Date(graph_data$Date, format ="%d/%m/%Y")
 graph_data$Time <- strptime(graph_data$Time, format ="%H:%M:%S")
 
 #create second plot
+png("plot2.png", width=480, height=480)
+
 plot(graph_data$Time, as.numeric(graph_data$Global_active_power), type = "l", xlab = "",
      ylab = "Global Active Power (kilowatts)" )
 
-png("plot2.png", width=480, height=480)
 dev.off()

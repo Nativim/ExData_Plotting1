@@ -11,6 +11,8 @@ graph_data$Time <- strptime(graph_data$Time, format ="%H:%M:%S")
 
 
 #create the frame and 4 plots
+png("plot4.png", width=480, height=480)
+
 graph_data[1:1440,"Time"] <- format(graph_data[1:1440,"Time"],"2007-02-01 %H:%M:%S")
 graph_data[1441:2880,"Time"] <- format(graph_data[1441:2880,"Time"],"2007-02-02 %H:%M:%S")
 par(mfrow=c(2,2))
@@ -26,5 +28,4 @@ legend("topright", lty=1, col=c("black","red","blue"),legend=c("Sub_metering_1",
 
 plot(graph_data$Time, graph_data$Global_reactive_power, type = "l", xlab = "datetime", ylab = "Global_reactive_power")
 
-png("plot4.png", width=480, height=480)
 dev.off()
