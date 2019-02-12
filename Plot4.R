@@ -21,7 +21,7 @@ plot(graph_data$Time, graph_data$Global_active_power, type = "l", xlab = "", yla
 
 plot(graph_data$Time, graph_data$Voltage, type = "l", xlab = "datetime", ylab = "Voltage")
 
-plot(graph_data$Time, graph_data$Sub_metering_1, type = "n", xlab = "", ylab = "Energy sub metering")
+plot(graph_data$Time, graph_data$Sub_metering_1, type = "l", xlab = "", ylab = "Energy sub metering")
 lines(graph_data$Time, graph_data$Sub_metering_2, col="red")
 lines(graph_data$Time, graph_data$Sub_metering_3, col="blue")
 legend("topright", lty=1, col=c("black","red","blue"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
