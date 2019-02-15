@@ -8,7 +8,7 @@ graph_data <- subset(household_data, household_data$Date=="1/2/2007" | household
 #convert date time field in date and time format
 graph_data$Date <- as.Date(graph_data$Date, format ="%d/%m/%Y")
 graph_data$Time <- strptime(graph_data$Time, format ="%H:%M:%S")
-#DateTime <- strptime(paste(graph_data$Date, graph_data$Time, sep=" "),"%d/%m/%Y %H:%M:%S")
+
 
 #create third plot
 png("plot3.png", width=480, height=480)
